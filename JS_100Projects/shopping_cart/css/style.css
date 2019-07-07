@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+header {
+  width: 100%;
+  height: 40px;
+  background: #FF4D3B; }
+  header .wrapper {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between; }
+    header .wrapper .navBarMenu {
+      width: 32px;
+      margin-top: 8px;
+      height: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer; }
+      header .wrapper .navBarMenu .topBar, header .wrapper .navBarMenu .middleBar, header .wrapper .navBarMenu .bottomBar {
+        height: 4px;
+        background: #FFBA3B; }
+    header .wrapper .title {
+      text-align: center;
+      padding-top: 5px;
+      letter-spacing: 4px; }
+      header .wrapper .title span {
+        font-size: 25px; }
+        header .wrapper .title span:first-of-type {
+          color: white;
+          margin-right: 3px; }
+        header .wrapper .title span:last-of-type {
+          color: #FFBA3B;
+          margin-left: 3px; }
+    header .wrapper .cart-btn {
+      width: 40px;
+      height: 40px;
+      color: #FFBA3B;
+      cursor: pointer; }
+
+.welcome {
+  background-image: url("../imgs/hero-bcg.jpeg");
+  background-size: cover;
+  height: 500px;
+  padding-top: 160px; }
+  .welcome section {
+    background: rgba(255, 194, 100, 0.6);
+    width: 55%;
+    height: 140px;
+    margin: auto;
+    color: #444;
+    text-align: center;
+    max-width: 500px;
+    min-width: 300px; }
+    .welcome section p {
+      font-size: 25px;
+      padding-top: 36px; }
+    .welcome section .shopNowButton {
+      margin: auto;
+      margin-top: 26px;
+      padding-top: 4px;
+      width: 90px;
+      height: 30px;
+      border: 3px solid #444;
+      cursor: pointer;
+      font-weight: bold; }
