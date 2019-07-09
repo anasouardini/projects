@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    title rock paper scissors
+    link(rel='stylesheet' href='css/style.css')
+    
+
+  body
+    .wrapper
+      .result
+        .playerScore#playerScore 0
+        .reset#reset Reset
+        .robotScore#robotScore 0
+        
+      .list
+        h2 Player
+        .player
+          .rock
+            img(class='rockImage' src='imgs/rock.png' alt='Rock')
+          .paper
+            img(class='paperImage' src='imgs/paper.png' alt='Paper')
+          .scissors
+            img(class='scissorsImage' src='imgs/scissors.png' alt='Scissors')
+        hr
+        h2 Robot
+        .robot
+          .rock
+            img(class='rockImage' src='imgs/rock.png' alt='Rock')
+          .paper
+            img(class='paperImage' src='imgs/paper.png' alt='Paper')
+          .scissors
+            img(class='scissorsImage' src='imgs/scissors.png' alt='Scissors')
+    script(src='js/script.js')

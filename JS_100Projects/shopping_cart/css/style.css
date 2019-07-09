@@ -97,7 +97,8 @@ section.productsSection .sectionTitle {
   section.productsSection .sectionTitle h2 {
     font-size: 30px;
     text-align: center;
-    letter-spacing: 4px; }
+    letter-spacing: 4px;
+    text-transform: capitalize; }
 
 section.productsSection .products {
   display: flex;
