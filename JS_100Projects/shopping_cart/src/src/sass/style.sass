@@ -1,0 +1,176 @@
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+.wrapper
+  width: 80%
+  margin: auto
+
+header
+  position: sticky
+  top: 0
+  z-index: 1
+  height: 40px
+  background: #FF4D3B
+
+  .wrapper
+    width: 80%
+    margin: auto
+    display: flex
+    justify-content: space-between
+
+    .navBarMenu
+      width: 32px
+      margin-top: 8px
+      height: 22px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      cursor: pointer
+
+      .topBar, .middleBar, .bottomBar
+        height: 4px
+        background: #FFBA3B
+
+
+    .title
+      text-align: center
+      padding-top: 5px
+      letter-spacing: 4px
+
+      span
+        font-size: 25px
+        &:first-of-type
+          color: #EEE
+          margin-right: 3px
+        &:last-of-type
+          color: #FFBA3B
+          margin-left: 3px
+
+    .cart-btn
+      margin-top: 10px
+      color: #FFBA3B
+      cursor: pointer
+      position: relative
+      font-size: 21px
+      cursor: pointer
+
+      .cart-items
+        position: absolute
+        width: 15px
+        height: 15px
+        top: -7px
+        right: -7px
+        color: #EEE
+        font-size: 15px
+        background: #444
+        border-radius: 5px
+        text-align: center
+
+section.welcome
+  background: url("../imgs/hero-bcg.jpeg") center/cover no-repeat
+  height: calc(100vh - 40px)
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  .shopNowCard
+    background: rgba(255, 194, 100, .6)
+    width: 55%
+    height: 140px
+    margin: auto
+    color: #444
+    text-align: center
+    max-width: 500px
+    display: flex
+    flex-direction: column
+    padding-top: 27px
+    text-transform: uppercase
+
+    p
+      font-size: 22px
+      font-weight: bold
+
+    .shopNowButton
+      margin: auto
+      padding: 5px 4px
+      width: 110px
+      height: 31px
+      border: 3px solid #444
+      cursor: pointer
+      font-weight: bold
+      font-size: 14px
+
+section.productsSection
+
+  .sectionTitle
+    padding: 70px 0 90px 0
+    h2
+      font-size: 30px
+      text-align: center
+      letter-spacing: 4px
+      text-transform: capitalize
+
+  .products
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+
+    div
+      margin: 20px 10px
+
+      .imageContainer
+        position: relative
+        overflow: hidden
+
+        &:hover button
+          right: 0
+
+        &:hover img
+          opacity: .6
+
+        img
+          width: 200px
+          height: 200px
+          display: block
+          transition-duration: .3s
+
+        button
+          position: absolute
+          right: -100%
+          bottom: 34px
+          width: 120px
+          height: 24px
+          background: #E8862A
+          color: #444
+          border: none
+          transition-duration: .3s
+          cursor: pointer
+          outline: none
+          &:hover
+            color: #EEE
+
+          i
+            position: absolute
+            left: 5px
+            top: 5px
+
+          .buttonText
+            font-size: 12px
+            margin: 0
+            margin-left: 20px
+            font-weight: bold
+            text-transform: uppercase
+
+      .title, .price
+        text-align: center
+        height: 26px
+        margin-bottom: 6px
+        margin-top: 6px
+        text-transform: capitalize
+
+      .price
+        font-weight: bold
+        color: #E8862A

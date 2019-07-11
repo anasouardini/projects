@@ -19,23 +19,22 @@ const source        = require("vinyl-source-stream");
 const buffer        = require("vinyl-buffer");
 
 var srcSRC = "src/*/*",
-    srcSRC1 = "src/*",
-    srcDEST = "../../../dist/projects/JS_100Projects/Rock_Paper_Scissors/src/src/",
+    srcDEST = "../../../dist/projects/JS_100Projects/shopping_cart/src/src/",
     gulpFileSRC = "gulpfile.js",
-    gulpFileDEST = "../../../dist/projects/JS_100Projects/Rock_Paper_Scissors/src/",
+    gulpFileDEST = "../../../dist/projects/JS_100Projects/shopping_cart/src/",
     packageSRC = "package.json",
-    packageDEST = "../../../dist/projects/JS_100Projects/Rock_Paper_Scissors/src/",
+    packageDEST = "../../../dist/projects/JS_100Projects/shopping_cart/src/",
     packageLockSRC = "package-lock.json",
-    packageLockDEST = "../../../dist/projects/JS_100Projects/Rock_Paper_Scissors/src/";
+    packageLockDEST = "../../../dist/projects/JS_100Projects/shopping_cart/src/";
 
-var htmlSRC = "src/index.pug";
-var htmlDEST = "../../../../dist/portfolio/solidtyper.github.io/projects/JS_100projects/Rock_Paper_Scissors/";
-var sassSRC = "src/sass/*.sass";
-var cssDEST = "../../../../dist/portfolio/solidtyper.github.io/projects/JS_100projects/Rock_Paper_Scissors/css/";
-var jsSRC = "src/js/script.js";
-var jsDEST = "../../../../dist/portfolio/solidtyper.github.io/projects/JS_100projects/Rock_Paper_Scissors/js/";
-var imgsSRC = "src/imgs/*";
-var imgsDEST = "../../../../dist/portfolio/solidtyper.github.io/projects/JS_100projects/Rock_Paper_Scissors/imgs/";
+var htmlSRC = "src/index.pug",
+    htmlDEST = "../../../dist/projects/JS_100Projects/shopping_cart/",
+    sassSRC = "src/sass/*.sass",
+    cssDEST = "../../../dist/projects/JS_100Projects/shopping_cart/css/",
+    jsSRC = "src/js/script.js",
+    jsDEST = "../../../dist/projects/JS_100Projects/shopping_cart/js/",
+    imgsSRC = "src/imgs/*",
+    imgsDEST = "../../../dist/projects/JS_100Projects/shopping_cart/imgs/";
 
 gulp.task("connect", function(done){
   connect.server({
@@ -86,7 +85,7 @@ gulp.task("cpimgs",function(){
 
 
 gulp.task("cleancss", function(){
-  return gulp.src([cssDEST+"style.css",cssDEST+"custom.css"])
+  return gulp.src(cssDEST+"style.css")
       //.pipe(cleancss({content: ["../../dist/portfolio/solidtyper.github.io/index.php"]}))
       .pipe(mincss())
       .pipe(gulp.dest(cssDEST))
@@ -100,16 +99,13 @@ gulp.task("cleanjs", function(){
 })
 
 gulp.task("cleanimgs", function(){
-  return gulp.src(imgsDET+"*")
+  return gulp.src(imgsDEST+"*")
       .pipe(minimgs())
       .pipe(gulp.dest(imgsDEST))
 })
 
 gulp.task("cleanSrcFiles", function(){
     gulp.src([srcSRC])
-        .pipe(gulp.dest([srcDEST]));
-
-    gulp.src([srcSRC1])
         .pipe(gulp.dest([srcDEST]));
 
     gulp.src([gulpFileSRC])
@@ -122,7 +118,6 @@ gulp.task("cleanSrcFiles", function(){
         .pipe(gulp.dest([packageLockDEST]));
 
 })
-
 
 gulp.task("watchPug", function(done){gulp.watch('src/index.pug', gulp.series('html'));done()});
 gulp.task("watchSass", function(done){gulp.watch('src/sass/*.sass', gulp.series('css'));done()});

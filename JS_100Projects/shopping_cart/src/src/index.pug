@@ -1,0 +1,66 @@
+
+doctype HTML
+html
+  head
+    meta(name='viewport', content='width=device-width')
+    meta(charset='UTF-8')
+    title shopping cart
+    link(rel='stylesheet', href='css/style.css')
+    link(rel='stylesheet', href='css/all.min.css')
+    script(src='js/script.js')
+
+  body
+    header
+      .wrapper
+        .navBarMenu
+          .topBar
+          .middleBar
+          .bottomBar
+        
+        .title
+          span Comfy
+          span House
+        
+        .cart-btn
+          span.nav-icon
+            i.fas.fa-cart-plus
+          .cart-items 0
+    .cartOverlay
+    aside.cartFrame
+      .cartCloseButton
+        i.fas.fa-window-close
+      h2.title
+      .cartItems
+        .item
+          .img
+          .title
+          .price
+          .removeButton
+          .quantity
+          
+      .carttotal
+      .cartClearButton
+      
+    section.welcome
+      .shopNowCard
+        p comfy house collection 
+        .shopNowButton Shop Now
+        
+    section.productsSection
+      .wrapper
+        .sectionTitle 
+          h2 our products
+        .products
+          - var titles = ['queen bed', 'king bed', 'bed for one', 'table', 'couch', 'twin  panel bed', 'fridge']
+          - var prices = ['540', '250', '680', '450', '354', '260', '750']
+          each productName, index in ['queenBed', 'kingBed', 'bedForOne', 'table', 'couch', 'twinPanelBed', 'fridge']
+            div(class=productName)
+              .imageContainer
+                img(src='imgs/'+productName+'.jpeg')
+                button(data-id=index+1 class='productButton')
+                  i.fas.fa-shopping-cart
+                  .buttonText add to cart
+              .title= titles[index]
+              .price= ('$' + prices[index])
+        
+        

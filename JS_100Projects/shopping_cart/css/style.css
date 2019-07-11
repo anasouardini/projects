@@ -7,6 +7,16 @@
   width: 80%;
   margin: auto; }
 
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: #FFBA3B;
+  opacity: .8; }
+
 header {
   position: -webkit-sticky;
   position: sticky;
@@ -60,6 +70,86 @@ header {
         background: #444;
         border-radius: 5px;
         text-align: center; }
+
+aside.cartFrame {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100vh;
+  z-index: 2;
+  background: #E6DBAA; }
+  aside.cartFrame .cartCloseButton {
+    position: absolute;
+    top: 17px;
+    left: 22px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #FF4D3B; }
+  aside.cartFrame h2.title {
+    margin-top: 40px;
+    font-size: 25px;
+    text-align: center; }
+  aside.cartFrame .cartItems {
+    width: 95%;
+    margin: 60px auto;
+    overflow-Y: scroll; }
+    aside.cartFrame .cartItems .item {
+      padding: 5px 20px;
+      display: flex;
+      justify-content: space-between; }
+      aside.cartFrame .cartItems .item .itemInfo {
+        display: flex;
+        justify-content: space-between; }
+        aside.cartFrame .cartItems .item .itemInfo .img {
+          width: 100px;
+          height: 100px;
+          margin-right: 20px;
+          background-size: cover;
+          cursor: pointer;
+          background-image: url("../imgs/table.jpeg"); }
+        aside.cartFrame .cartItems .item .itemInfo .itemDetails .title, aside.cartFrame .cartItems .item .itemInfo .itemDetails .price, aside.cartFrame .cartItems .item .itemInfo .itemDetails .removeButton {
+          margin-top: 10px;
+          color: #222;
+          font-size: 18px; }
+        aside.cartFrame .cartItems .item .itemInfo .itemDetails .removeButton {
+          cursor: pointer;
+          color: #555; }
+      aside.cartFrame .cartItems .item .itemQuantity {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 24px;
+        color: #555;
+        font-weight: bold; }
+        aside.cartFrame .cartItems .item .itemQuantity .quantityPlus, aside.cartFrame .cartItems .item .itemQuantity .quantityMinus {
+          font-size: 15px;
+          color: #FF4D3B;
+          cursor: pointer; }
+  aside.cartFrame .cartTotal, aside.cartFrame .cartClear {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #222; }
+  aside.cartFrame .cartTotal {
+    bottom: 100px; }
+  aside.cartFrame .cartClear .cartClearButton {
+    border: 1px solid #000;
+    background: #FF4D3B;
+    width: 100px;
+    margin: auto;
+    cursor: pointer; }
+
+.cartFrameVisible {
+  right: 0; }
+
+.overlayVisible {
+  display: block; }
 
 section.welcome {
   background: url("../imgs/hero-bcg.jpeg") center/cover no-repeat;
